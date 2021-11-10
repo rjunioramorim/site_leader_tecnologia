@@ -12,13 +12,14 @@
   <header id="header">
     <a href="#" class="logo">Leader Tecnologia</a>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">Sobre nós</a></li>
-      <li><a href="#services">Serviços</a></li>
-      <li><a href="#portfolio">Portfólio</a></li>
-      <li><a href="#teams">Equipe</a></li>
-      <li><a href="#contact">Contatos</a></li>
+      <li><a href="#home" onclick="toggle()">Home</a></li>
+      <li><a href="#about" onclick="toggle()">Sobre nós</a></li>
+      <li><a href="#services" onclick="toggle()">Serviços</a></li>
+      <li><a href="#portfolio" onclick="toggle()">Portfólio</a></li>
+      <li><a href="#teams" onclick="toggle()">Equipe</a></li>
+      <li><a href="#contact" onclick="toggle()">Contatos</a></li>
     </ul>
+    <div class="toggle" onclick="toggle()"></div>
   </header>
   
   <!-- Banner -->
@@ -243,6 +244,11 @@
       let header = document.querySelector('header');
       header.classList.toggle('sticky', window.scrollY > 0);
     });
+
+    function toggle() {
+      let header = document.querySelector('header'); 
+      header.classList.toggle('active')
+    }
   </script>
 </body>
 </html>
